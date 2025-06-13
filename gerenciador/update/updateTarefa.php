@@ -64,9 +64,10 @@
           $dadosTarefa = file_get_contents("../tarefas.json");
           $dadosTarefa = json_decode($dadosTarefa, true);
 
-          if($dadosTarefa != null)
-          foreach($dadosTarefa as $key => $valor){
-            echo "<input type='button' id='{$key}' value='{$valor["name"]}' class='tarefa' onclick='abrirMenu({$key})'>";
+          if($dadosTarefa != null){
+            foreach($dadosTarefa as $key => $valor){
+              echo "<input type='button' id='{$key}' value='{$valor["name"]}' class='tarefa' onclick='abrirMenu({$key})'>";
+            }
           }
         ?>
       </form>

@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div class="box4">
-                <a href="">
+                <a href="./delete/deleteTarefa.php">
                     <p class="txthome"> Excluir Tarefas </p>
                     <img src="./img/delete.png" alt="" class="create">
                 </a>
