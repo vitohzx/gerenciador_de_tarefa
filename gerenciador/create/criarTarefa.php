@@ -9,8 +9,10 @@
 <body>
     <div class="container">
         <div class="box1">
+
             <p class="txtcreate"> Criar Tarefas </p>
             <img src="../img/create.png" alt="" class="create">
+            <a href="../index.php"> <img src="../img/home.png" alt="" class="home"> </a>
         </div>
         <div class="box2">
             <form action="create.php" method="post">

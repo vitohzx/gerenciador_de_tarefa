@@ -11,7 +11,7 @@
         "descricao": "a",
         "data": "",
         "hora": "",
-        "status": "Atrasada"
+        "status": "Concluida"
     },
     "4": {
         "name": "a",
@@ -25,20 +25,6 @@
         "descricao": "",
         "data": "2025-07-04",
         "hora": "",
-        "status": "Pendente"
-    },
-    "7": {
-        "name": "a",
-        "descricao": "",
-        "data": "2025-07-04",
-        "hora": "",
-        "status": "Pendente"
-    },
-    "8": {
-        "name": "teste",
-        "descricao": "teste",
-        "data": "2025-06-27",
-        "hora": "22:18",
         "status": "Pendente"
     },
     "9": {

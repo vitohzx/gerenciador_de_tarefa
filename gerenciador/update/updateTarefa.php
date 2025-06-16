@@ -16,7 +16,6 @@
     document.getElementById("task").style.display = "flex";
     document.body.classList.add("no-scroll");
     document.getElementById("overlay").style.display = "block";
-
     document.body.classList.add("no-scroll");
   }
 

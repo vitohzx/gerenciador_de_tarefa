@@ -21,8 +21,9 @@
     height: 45%;
     width: 50%;
     background-color: black;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+
 }
 
 .box2 {
@@ -48,6 +49,9 @@
     font-weight: bold;
     font-size: 200%;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .box2 form {
@@ -79,6 +83,7 @@
     border: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    font-size: 120%;
 }
 
 input:focus {
@@ -121,4 +126,14 @@ input:focus {
     width: 60%;
     height: 10%;
     margin-top: 5%;
+}
+
+a {
+    z-index: 100;
+    position: absolute;
+}
+
+.home {
+    height: 8%;
+    width: 8%;
 }
