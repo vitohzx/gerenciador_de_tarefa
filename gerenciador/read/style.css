@@ -84,7 +84,7 @@ img {
     position: absolute;
     color: white;
     font-weight: bold;
-    font-size: 200%;
+    font-size: 160%;
     z-index: 10;
 }
 
@@ -106,6 +106,7 @@ input {
     border: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-size: 80%;
+    cursor: pointer;
 }
 
 select {
@@ -116,6 +117,7 @@ select {
     margin-right: 3%;
     font-size: 75%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 select:focus {

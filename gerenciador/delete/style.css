@@ -52,4 +52,64 @@ img {
 
 .linha {
     display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;    
+    width: 60%;
+    height: 100%;
+}
+
+.deletar {
+    width: 8vw;
+    height: 6vh;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 80%;
+    margin-top: 4vh;
+    align-self: center;
+    cursor: pointer;
+}
+
+.tarefa {
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    max-width: 100%;   
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    height: 3vh;
+    width: 3vh; 
+    margin-right: 8px;
+    cursor: pointer; 
+}
+
+.boxtarefa {
+    display: flex;
+    border-left: solid 10px red;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

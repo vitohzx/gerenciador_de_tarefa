@@ -35,38 +35,5 @@
             </div>
         </div>
     </div>
-
-
-    <h1> Gerenciador de tarefas </h1>
-
-    <h3> Deletar tarefas </h3>
-
-    <form action="./delete/delete.php" method="post">
-        nome tarefa <input type="text" name="nameDelete" id=""><br><br>
-        <input type="submit" value="deletar tarefa">
-    </form>
-    <h3> Exibir tarefas </h3>
-
-    <form action="read.php" method="post">
-        
-        <input type="submit" value="exibir tarefas">
-    </form>
-    
-    <h3> Editar tarefas </h3>
-
-    <form action="update.php" method="post">
-        digite o novo nome da tarefa que sera alterada <input type="text" name="nameEdit" id=""><br><br>
-        <input type="text" name="nameNovo" id="">
-        <input type="text" name="descEdit" id="">
-        <input type="date" name="dateEdit" id="">
-        <input type="time" name="timeEdit" id="">
-        <select name="statusEdit" id="">
-            <option value="Pendente"> Pendente </option>
-            <option value="Poncluida"> Concluida </option>
-        </select>
-        
-        <input type="submit" value="editar tarefa">
-    </form>
-    
 </body>
 </html>

@@ -1,31 +1,32 @@
 <?php
-    include ("index.php");
+
     function deleteTask($id){
 
         $json = file_get_contents('../tarefas.json');
         $dadosTarefa = json_decode($json, true);
         
 
-        foreach ($dadosTarefa as $key => $tarefa){
-            if($tarefa["name"] == $id){
-                unset($dadosTarefa[$key]);
-
-                echo "<script> alert('Tarefa deletada com Sucesso!');</script>";
-                $json = json_encode($dadosTarefa, JSON_PRETTY_PRINT);
-                file_put_contents('../tarefas.json', $json);
-
-                return;
+        foreach ($dadosTarefa as $key => $valor){
+            for ($i = 0; $i < count($id); $i++){
+                if($key == $id[$i]){
+                    unset($dadosTarefa[$key]);
+                }
             }
         }
 
-        echo "<script> alert('Nenhuma tarefa encontrada!'); </script>";
         $json = json_encode($dadosTarefa, JSON_PRETTY_PRINT);
-        file_put_contents('../tarefas.json', $json);
-        
+        file_put_contents('../tarefas.json', $json); 
+
+        return include_once("deleteTarefa.php");
+
     }
 
     if($_POST){
-        $nameTask = $_POST['nameDelete'];
-        deleteTask($nameTask);
+        $chk = $_POST["checkboxes"];
+        deleteTask($chk);
     }
+    else {
+        include_once("deleteTarefa.php");
+    }
+
 ?>

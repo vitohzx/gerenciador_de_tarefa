@@ -12,16 +12,12 @@ function readTask()
     $json = file_get_contents('../tarefas.json');
     $dadosTarefa = json_decode($json, true);
 
-    if ($dadosTarefa == null || !is_array($dadosTarefa)) {
-        echo "<script> alert('Erro ao decodificar o JSON ou arquivo vazio.'); </script>";
-        return;
-    }
     echo "<link rel='stylesheet' href='style.css'>";
     echo (
         "<div class='container'>
                 <div class='box1'>
-                    <img src='../img/read.png' alt=''>
                     <p class='txt'> Lista de Tarefas </p>
+                    <img src='../img/read.png' alt=''>
                 </div>"
     );
 
@@ -31,12 +27,18 @@ function readTask()
 
     function exibirTask($valor)
     {
+        $data = "";
+
+        if($valor["data"] != "") {
+            $data = date("d/m/Y", strtotime($valor["data"]));
+        }
+        
         echo (
             "<div class='boxTarefa'>
                 <p style='margin-top: 0'> Nome: {$valor["name"]}</p>
                 <div class='detalhes'>
                     <p> Descrição: {$valor["descricao"]}</p>
-                    <p> Data: {$valor["data"]}</p>
+                    <p> Data: {$data}</p>
                     <p> Hora: {$valor["hora"]}</p>
                     <p> Status: {$valor["status"]} </p>
                 </div>
@@ -48,22 +50,28 @@ function readTask()
 
     $dataAtual = strtotime(date("Y/m/d H:i:s"));
 
+    if ($dadosTarefa != null){
+        foreach ($dadosTarefa as $key => $valor) {
 
-    foreach ($dadosTarefa as $key => $valor) {
+            if($valor["data"] != ""){
+                $dataTask = strtotime($valor["data"] . $valor["hora"]);
 
-        $dataTask = strtotime($valor["data"] . $valor["hora"]);
-
-        if ($dataTask < $dataAtual) {
-            $dadosTarefa[$key]["status"] = "Atrasada";
+                if ($dataTask < $dataAtual) {
+                    $dadosTarefa[$key]["status"] = "Atrasada";
+                }
+            }
         }
+
     }
 
     // ordenar lista por data
 
     $listaOrdenada = [];
 
-    foreach ($dadosTarefa as $key => $valor) {
-        $listaOrdenada[] = $valor;
+    if ($dadosTarefa != null){
+        foreach ($dadosTarefa as $key => $valor) {
+            $listaOrdenada[] = $valor;
+        }
     }
 
     usort($listaOrdenada, function ($a, $b) {

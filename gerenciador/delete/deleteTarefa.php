@@ -14,25 +14,28 @@
         </div>
         <div class="box2">
 
-            <form action="delete.php" method="post">
-
-            </form>
         <?php
             $dadosTarefa = file_get_contents("../tarefas.json");
             $dadosTarefa = json_decode($dadosTarefa, true);
   
             echo '<form action="delete.php" method="post">';
+            echo "<div class='boxtarefa'>";
             if($dadosTarefa != null){
                 foreach($dadosTarefa as $key => $valor){
                     echo ("
                         <div class='linha'>
-                            <input type='checkbox' name='checkboxes[]'> <span> {$valor["name"]} </span> 
+                            <label>
+                                <input type='checkbox' name='checkboxes[]' value='{$key}' class='chk'> 
+                                <span class='tarefa'> {$valor["name"]} </span>
+                            </label>
                         </div>
+                     
                     ");
                 }
             }
-            echo '<input type="submit" value="Deletar">';
-            echo '</form>'
+            echo "</div>";
+            echo '<input type="submit" value="Deletar" class="deletar">';
+            echo '</form>';
         ?>
         
         </div>

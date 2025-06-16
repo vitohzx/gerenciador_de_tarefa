@@ -2,6 +2,8 @@
 
 function createTask()
 {
+    include_once("criarTarefa.php");
+
     $nameTask = $_POST['nameTarefa'];
     $descTask = $_POST['descTarefa'];
     $dateTask = $_POST['dataTarefa'];
@@ -38,7 +40,6 @@ function createTask()
 }
 
 if ($_POST) {
-    include_once("criarTarefa.php");
     createTask();
 }
 

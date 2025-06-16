@@ -9,11 +9,11 @@ function updateTask($id, $name, $desc, $data, $time, $status)
     foreach ($dadosTarefa as $key => $tarefa) {
 
         if ($key == $id) {
-
-            $dadosTarefa[$key]['name'] = $name;
-            $dadosTarefa[$key]['descricao'] = $desc;
-            $dadosTarefa[$key]['data'] = $data;
-            $dadosTarefa[$key]['hora'] = $time;
+            
+            if($name != "") $dadosTarefa[$key]['name'] = $name;
+            if($desc != "") $dadosTarefa[$key]['descricao'] = $desc;
+            if($data != "") $dadosTarefa[$key]['data'] = $data;
+            if($time != "") $dadosTarefa[$key]['hora'] = $time;
             $dadosTarefa[$key]['status'] = $status;
 
             $json = json_encode($dadosTarefa, JSON_PRETTY_PRINT);
