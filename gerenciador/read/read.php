@@ -17,7 +17,8 @@ function readTask()
         "<div class='container'>
                 <div class='box1'>
                     <p class='txt'> Lista de Tarefas </p>
-                    <img src='../img/read.png' alt=''>
+                    <img src='../img/read.png' alt='' class='imgbox'>
+                    <a href='../index.php' class='link'> <img src='../img/home.png' alt='' class='home'> </a>
                 </div>"
     );
 

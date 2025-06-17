@@ -21,8 +21,8 @@
     height: 40vh;
     width: 50%;
     background-color: black;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .box2 {
@@ -35,7 +35,7 @@
     box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
-img {
+.imgbox {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -49,6 +49,9 @@ img {
     font-weight: bold;
     font-size: 200%;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 form {
@@ -180,4 +183,15 @@ select:focus {
 .fechar:focus {
     border: 2px solid rgba(255, 0, 0, 0.815);
     box-shadow: 0 0 5px rgba(146, 0, 0, 0.61);
+}
+
+.link {
+    display: flex;
+    z-index: 98;
+    position: absolute;
+    margin: 2%;
+}
+
+.home {
+    height: 3vw;
 }

@@ -10,7 +10,8 @@
     <div class="container">
         <div class="box1">
             <p class="txt"> Deletar Tarefas </p>
-            <img src="../img/delete.png" alt=""/>
+            <img src="../img/delete.png" alt=""/ class="imgbox">
+            <a href="../index.php" class="link"> <img src="../img/home.png" alt="" class="home"> </a>
         </div>
         <div class="box2">
 

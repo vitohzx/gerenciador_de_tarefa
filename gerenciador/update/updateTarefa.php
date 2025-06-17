@@ -55,7 +55,8 @@
 
     <div class="box1">
       <p class="txt"> Atualizar Tarefas </p>
-      <img src="../img/update.png" alt=""/>
+      <img src="../img/update.png" alt="" class="imgbox"/>
+      <a href="../index.php" class="link"> <img src="../img/home.png" alt="" class="home"> </a>
     </div>
 
     <div class="box2">
